@@ -1,16 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Caronas4Colonia.index1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Caronas4Colonia.index" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        uhu
-    </div>
-    </form>
+
 </body>
 </html>
