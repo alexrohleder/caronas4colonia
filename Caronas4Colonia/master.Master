@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="Caronas4Colonia.master" %>
+
+<!DOCTYPE html>
+
+<html>
+
+    <head runat="server">
+        <title>Caronas4Colonia</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <asp:ContentPlaceHolder id="head" runat="server"> </asp:ContentPlaceHolder>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server"> </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="master.authenticated.master.cs" Inherits="Caronas4Colonia.master_authenticated" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+    <br />
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a href="/dashboard.aspx" class="navbar-brand">Caronas4Colonias</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="dashboard.aspx">Dashboard</a></li>
+            <li><a href="procurar.aspx">Procurar</a></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+            <li><a href="logout.aspx">Sair</a></li>
+        </ul>
+    </nav>
+    
+    <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server"> </asp:ContentPlaceHolder>
+</asp:Content>
