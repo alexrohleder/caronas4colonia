@@ -3,20 +3,17 @@ using MySql.Data.MySqlClient;
 
 namespace Caronas4Colonia.Repositories
 {
-    public class UsuarioRepository : Connection
+    public class UsuarioRepository : AbstractRepository
     {
-        public static void Create(String nome, String senha)
+        override
+        protected string getTable()
         {
-            MySqlConnection conn = getConn();
+            return "Usuario";
+        }
 
-            conn.Open();
-
-            string sql = "insert into Usuario (nome, senha) values ('" + nome + "', '" + senha + "')";
-
-            MySqlCommand command = new MySqlCommand(sql, conn);
-            command.ExecuteNonQuery();
-
-            conn.Close();
+        public bool Authenticate(String user, String password)
+        {
+            return exists($"nome = \"{user}\" and senha = \"{password}\"");
         }
     }
 }

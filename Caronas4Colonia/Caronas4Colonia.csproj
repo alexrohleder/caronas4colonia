@@ -95,13 +95,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="cadastrar-usuario.aspx" />
-    <Content Include="index.aspx" />
+    <Content Include="dashboard.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="master.Master" />
+    <Content Include="master.authenticated.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,20 +112,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="login.aspx" />
+    <Content Include="procurar.aspx" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cadastrar-usuario.aspx.cs">
-      <DependentUpon>cadastrar-usuario.aspx</DependentUpon>
+    <Compile Include="dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cadastrar-usuario.aspx.designer.cs">
-      <DependentUpon>cadastrar-usuario.aspx</DependentUpon>
+    <Compile Include="dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Repositories\Connection.cs" />
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -131,14 +132,31 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="master.authenticated.master.cs">
+      <DependentUpon>master.authenticated.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="master.authenticated.master.designer.cs">
+      <DependentUpon>master.authenticated.master</DependentUpon>
     </Compile>
-    <Compile Include="Repositories\LoginRepository.cs" />
+    <Compile Include="master.Master.cs">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master.Master.designer.cs">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="procurar.aspx.cs">
+      <DependentUpon>procurar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="procurar.aspx.designer.cs">
+      <DependentUpon>procurar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\AbstractRepository.cs" />
+    <Compile Include="Repositories\CaronaRepository.cs" />
+    <Compile Include="Repositories\CidadeRepository.cs" />
+    <Compile Include="Repositories\UsuarioRepository.cs" />
     <Compile Include="logout.aspx.cs">
       <DependentUpon>logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -147,7 +165,6 @@
       <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\UsuarioRepository.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
