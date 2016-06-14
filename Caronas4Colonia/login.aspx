@@ -45,12 +45,8 @@
                 <asp:TextBox id="Usuario" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="form-group">
-                <label for="Usuario" class="control-label">Email</label>
-                <asp:TextBox id="Email" runat="server" CssClass="form-control"></asp:TextBox>
-            </div>
-            <div class="form-group">
                 <label for="Senha" class="control-label">Senha</label>
-                <asp:TextBox id="Senha" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox id="Senha" TextMode="Password" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <asp:Button id="submit" OnClick="CreateUser" Text="Cadastrar" runat="server" CssClass="btn btn-primary pull-right"></asp:Button>
         </div>

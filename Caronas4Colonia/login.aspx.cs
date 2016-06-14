@@ -25,7 +25,9 @@ namespace Caronas4Colonia
 
         protected void CreateUser(object sender, EventArgs e)
         {
-            // UsuarioRepository.Create(Usuario.Text, Senha.Text);
+            UsuarioRepository UsuarioRepository = new UsuarioRepository();
+
+            UsuarioRepository.Create(Usuario.Text, Senha.Text);
         }
     }
 }

@@ -34,6 +34,15 @@ namespace Caronas4Colonia.Repositories
             return command.ExecuteReader();
         }
 
+        public void executeNonQuery(string sql)
+        {
+            conn.Close();
+            conn.Open();
+
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            command.ExecuteNonQuery();
+        }
+
         public MySqlDataReader get(string fields, string where = "")
         {
             string query = "select " + fields + " from " + getTable() + " where 1 = 1";

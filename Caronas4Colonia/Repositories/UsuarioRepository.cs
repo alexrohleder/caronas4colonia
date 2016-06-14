@@ -15,5 +15,12 @@ namespace Caronas4Colonia.Repositories
         {
             return exists($"nome = \"{user}\" and senha = \"{password}\"");
         }
+
+        public void Create(String user, String password)
+        {
+            string sql = $"insert into usuario (nome, senha) values (\"{user}\", \"{password}\")";
+
+            executeNonQuery(sql);
+        }
     }
 }

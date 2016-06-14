@@ -56,9 +56,9 @@ namespace Caronas4Colonia
         {
             TableRow row = new TableRow();
 
-            TableCell idCell = new TableCell();
-            TableCell asCell = new TableCell();
-            TableCell deCell = new TableCell();
+            TableCell idCell   = new TableCell();
+            TableCell asCell   = new TableCell();
+            TableCell deCell   = new TableCell();
             TableCell paraCell = new TableCell();
 
             idCell.Text   = reader["id_carona"].ToString();
